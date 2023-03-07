@@ -1,7 +1,8 @@
 #!/bin/bash
 
-set -e
-FILESIGNATURE=$(sed -i "s/'.asm'/'.bin'" $1)
+#set -e
+
+FILESIGNATURE=$(echo $1 | sed "s/.asm/.bin/")
 
 echo $FILESIGNATURE
 
