@@ -42,7 +42,7 @@ jmp $; jump to current address = infinite loop
 the_secret:
   ; ASCII code 0x58 ('X') is stored just before the zero-padding
   ; On this code, that is at byte 0x2d (check it out using 'xxd file.bin')
-  db "X"
+  db "X",0 ; db stands for declare bytes of data, 0 at the end as null-terminating
 
 ; Fill with 510 zero minus the size of the previous code
 times 510-($-$$) db 0
